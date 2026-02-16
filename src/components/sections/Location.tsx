@@ -94,12 +94,14 @@ export function Location() {
                   >
                     {clinic.phone}
                   </a>
+                  {clinic.email && (
                   <a
                     href={`mailto:${clinic.email}`}
                     className="text-secondary/70 hover:text-primary transition-colors block mt-1"
                   >
                     {clinic.email}
                   </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -122,6 +124,8 @@ export function Location() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  allow="fullscreen"
+                  sandbox="allow-scripts allow-same-origin allow-popups"
                   title={`Ubicación de ${clinic.name}`}
                 />
               ) : (
